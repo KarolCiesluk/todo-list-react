@@ -19,7 +19,7 @@ function App() {
   const toggleHideDone = () => {
     return setHideDone(hideDone => !hideDone);
   };
-  
+
   return (
     <Container>
       <Header title="Lista zadań" />
@@ -27,11 +27,17 @@ function App() {
         title="Dodaj nowe zadanie"
         body={<Form />}
       />
-      
+
       <Section
         title="Lista zadań"
         body={<Tasks tasks={tasks} hideDone={hideDone} />}
-        extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        extraHeaderContent={
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+          />
+        }
       />
     </Container>
   );
