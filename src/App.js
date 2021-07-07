@@ -6,10 +6,17 @@ import Header from "./Header";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 
+const getInitialTasks = () => {
+  const tasksFromLocalStorage = localStorage.getItem("tasks");
+
+  return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : [];
+}
+
 function App() {
   const [hideDone, setHideDone] = useState(false);
-
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+  const [tasks, setTasks] = useState(getInitialTasks);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -45,7 +52,7 @@ function App() {
     setTasks(tasks => [
       ...tasks,
       {
-        id: tasks.length? tasks[tasks.length - 1].id + 1 : 1,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
         content,
       }
     ])
