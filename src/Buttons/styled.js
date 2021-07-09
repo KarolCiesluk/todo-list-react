@@ -10,22 +10,22 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
     border: none;
     background: none;
-    color: teal;
+    color: ${({ theme }) => theme.primaryColor.standard};
     font-size: initial;
     transition: color 0.3s;
 
     &:hover {
-        color: hsl(180, 100%, 30%);
+        color: ${({ theme }) => theme.primaryColor.hover};
         cursor: pointer;
     }
 
     &:active {
-        color: hsl(180, 100%, 35%);
+        color: ${({ theme }) => theme.primaryColor.active};
     }
 
     ${({ doneAll }) => doneAll && css`
         &:disabled {
-            color: #ddd;
+            color: ${({ theme }) => theme.fillingColor};
         }
     `}
 `;
