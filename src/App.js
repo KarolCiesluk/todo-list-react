@@ -6,7 +6,7 @@ import Header from "./Header";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import {theme} from "./theme";
+import { theme } from "./theme";
 
 const getInitialTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
