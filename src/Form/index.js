@@ -32,7 +32,7 @@ const Form = ({ addNewTask }) => {
             />
             <Button>Dodaj zadanie</Button>
         </Wrapper>
-    )
+    );
 };
 
 export default Form;
