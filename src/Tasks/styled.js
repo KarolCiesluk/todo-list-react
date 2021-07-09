@@ -37,20 +37,20 @@ export const Button = styled.button`
 
     ${({ toggleDone }) => toggleDone && css`
         background: ${({ theme }) => {
-      return theme.buttonColors.forestGreen.standard;
-    }};
+            return theme.buttonColors.forestGreen.standard;
+        }};
 
         &:hover {
             background: ${({ theme }) => {
-      return theme.buttonColors.forestGreen.hover;
-    }};
+            return theme.buttonColors.forestGreen.hover;
+        }};
             cursor: pointer;
         }
 
         &:active {
             background: ${({ theme }) => {
-      return theme.buttonColors.forestGreen.active;
-    }};
+            return theme.buttonColors.forestGreen.active;
+        }};
         }
     `}
 
