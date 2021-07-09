@@ -9,6 +9,39 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {};
 
+/*
+  1 Button
+    color: teal
+    hover: hsl(180, 100%, 30%)
+    active: hsl(180, 100%, 35%)
+    disabledColor: #ddd
+  2 Form
+    I Input
+      border: #ddd
+    II Button
+      color: white
+      background: teal
+      hoverBackground: hsl(180, 100%, 30%)
+      focusBackground: hsl(180, 100%, 35%)
+  3 Section
+    I Wrapper
+      background: white
+      shadow: #ddd
+    II Header
+      border: #ddd
+  4 Tasks
+    I Item
+      border: #ddd
+    II Button
+      color: white
+      background: hsl(120, 61%, 34%)
+      hoverBackbground: hsl(120, 61%, 39%)
+      activeBackground: hsl(120, 61%, 44%)
+      background: hsl(348, 83%, 47%)
+      hoverBackbground: hsl(348, 83%, 52%)
+      activeBackground: hsl(348, 83%, 57%)
+*/    
+
 const getInitialTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
 
