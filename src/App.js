@@ -7,13 +7,15 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
+const theme = {};
+
 const getInitialTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
 
   return tasksFromLocalStorage
     ? JSON.parse(tasksFromLocalStorage)
     : [];
-}
+};
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -60,7 +62,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Container>
         <Header title="Lista zadań" />
         <Section
@@ -90,6 +92,6 @@ function App() {
       </Container>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
