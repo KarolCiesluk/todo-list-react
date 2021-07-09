@@ -12,24 +12,28 @@ export const Wrapper = styled.form`
 
 export const Input = styled.input`
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }) => theme.fillingColor};
 `;
 
 export const Button = styled.button`
     padding: 10px;
-    background: teal;
-    color: white;
+    background: ${({ theme }) => theme.primaryColor.standard};
+    color: ${({ theme }) => theme.secondaryColor};
     border: none;
     transition: transform 0.3s, background 0.3s;
 
     &:hover {
         transform: scale(1.1);
-        background-color: hsl(180, 100%, 30%);
+        background-color: ${({ theme }) => theme.primaryColor.hover};
         cursor: pointer;
     }
 
     &:focus {
         outline: none;
-        background-color: hsl(180, 100%, 35%);
+        background-color: ${({ theme }) => theme.primaryColor.hover};
+    }
+
+    &:active {
+        background-color: ${({ theme }) => theme.primaryColor.active};
     }
 `;
