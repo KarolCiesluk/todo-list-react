@@ -13,8 +13,8 @@ const theme = {
     hover: "hsl(180, 100%, 30%)",
     active: "hsl(180, 100%, 35%)",
   },
-  fillingColor: "#ddd",
   secondaryColor: "white",
+  fillingColor: "#ddd",
   buttonColors: {
     forestGreen: {
       standard: "hsl(120, 61%, 34%)",
