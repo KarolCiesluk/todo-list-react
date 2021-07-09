@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Wrapper, Input, Button } from "./styled";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null);
+
+    const focusInput = () => {
+        inputRef.current.focus();
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -12,11 +17,14 @@ const Form = ({ addNewTask }) => {
             addNewTask(newTaskContent.trim());
             setNewTaskContent("");
         }
+
+        focusInput();
     };
 
     return (
         <Wrapper onSubmit={onFormSubmit}>
             <Input
+                ref={inputRef}
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 placeholder="Co jest do zrobienia?"
