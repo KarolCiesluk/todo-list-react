@@ -7,39 +7,59 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
-const theme = {};
+const theme = {
+  primaryColor: {
+    standard: "teal",
+    hover: "hsl(180, 100%, 30%)",
+    active: "hsl(180, 100%, 35%)",
+  },
+  fillingColor: "#ddd",
+  secondaryColor: "white",
+  buttonColors: {
+    forestGreen: {
+      standard: "hsl(120, 61%, 34%)",
+      hover: "hsl(120, 61%, 39%)",
+      active: "hsl(120, 61%, 44%)",
+    },
+    crimson: {
+      standard: "hsl(348, 83%, 47%)",
+      hover: "hsl(348, 83%, 52%)",
+      active: "hsl(348, 83%, 57%)",
+    },
+  },
+};
 
 /*
   1 Button
-    color: teal
-    hover: hsl(180, 100%, 30%)
-    active: hsl(180, 100%, 35%)
-    disabledColor: #ddd
+    color: teal 1a)
+    hover: hsl(180, 100%, 30%) jaśniejszy teal 1b)
+    active: hsl(180, 100%, 35%) najjaśniejszy teal 1c)
+    disabledColor: #ddd szary 2)
   2 Form
     I Input
-      border: #ddd
+      border: #ddd szary 2)
     II Button
-      color: white
-      background: teal
-      hoverBackground: hsl(180, 100%, 30%)
-      focusBackground: hsl(180, 100%, 35%)
+      color: white 3)
+      background: teal 1a)
+      hoverBackground: hsl(180, 100%, 30%) 1b)
+      focusBackground: hsl(180, 100%, 35%) 1c)
   3 Section
     I Wrapper
-      background: white
-      shadow: #ddd
+      background: white 3)
+      shadow: #ddd szary 2)
     II Header
-      border: #ddd
+      border: #ddd szary 2)
   4 Tasks
     I Item
-      border: #ddd
+      border: #ddd szary 2) 
     II Button
-      color: white
-      background: hsl(120, 61%, 34%)
-      hoverBackbground: hsl(120, 61%, 39%)
-      activeBackground: hsl(120, 61%, 44%)
-      background: hsl(348, 83%, 47%)
-      hoverBackbground: hsl(348, 83%, 52%)
-      activeBackground: hsl(348, 83%, 57%)
+      color: white 3)
+      background: hsl(120, 61%, 34%) zielony 4a)
+      hoverBackbground: hsl(120, 61%, 39%) jaśniejszy zielony 4b)
+      activeBackground: hsl(120, 61%, 44%)  najjaśniejszy zielony 4c)
+      background: hsl(348, 83%, 47%) czerwony 5a)
+      hoverBackbground: hsl(348, 83%, 52%) jaśniejszy czerwony 5b)
+      activeBackground: hsl(348, 83%, 57%) najjaśniejszy czerwony 5c)
 */    
 
 const getInitialTasks = () => {
