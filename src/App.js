@@ -9,8 +9,6 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import { useTasks } from "./useTasks";
 
-
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
 
