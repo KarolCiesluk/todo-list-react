@@ -8,16 +8,15 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
-const getInitialTasks = () => {
-  const tasksFromLocalStorage = localStorage.getItem("tasks");
+const useTasks = () => {
+  const getInitialTasks = () => {
+    const tasksFromLocalStorage = localStorage.getItem("tasks");
 
-  return tasksFromLocalStorage
-    ? JSON.parse(tasksFromLocalStorage)
-    : [];
-};
+    return tasksFromLocalStorage
+      ? JSON.parse(tasksFromLocalStorage)
+      : [];
+  };
 
-function App() {
-  const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(getInitialTasks);
 
   useEffect(() => {
@@ -27,10 +26,6 @@ function App() {
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter((task) => task.id !== id));
   }
-
-  const toggleHideDone = () => {
-    return setHideDone(hideDone => !hideDone);
-  };
 
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
@@ -59,6 +54,24 @@ function App() {
       }
     ])
   };
+
+  return { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask };
+};
+
+function App() {
+  const [hideDone, setHideDone] = useState(false);
+
+  const toggleHideDone = () => {
+    return setHideDone(hideDone => !hideDone);
+  };
+
+  const {
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    addNewTask
+  } = useTasks();
 
   return (
     <ThemeProvider theme={theme}>
