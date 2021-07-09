@@ -29,39 +29,6 @@ const theme = {
   },
 };
 
-/*
-  1 Button
-    color: teal 1a)
-    hover: hsl(180, 100%, 30%) jaśniejszy teal 1b)
-    active: hsl(180, 100%, 35%) najjaśniejszy teal 1c)
-    disabledColor: #ddd szary 2)
-  2 Form
-    I Input
-      border: #ddd szary 2)
-    II Button
-      color: white 3)
-      background: teal 1a)
-      hoverBackground: hsl(180, 100%, 30%) 1b)
-      focusBackground: hsl(180, 100%, 35%) 1c)
-  3 Section
-    I Wrapper
-      background: white 3)
-      shadow: #ddd szary 2)
-    II Header
-      border: #ddd szary 2)
-  4 Tasks
-    I Item
-      border: #ddd szary 2) 
-    II Button
-      color: white 3)
-      background: hsl(120, 61%, 34%) zielony 4a)
-      hoverBackbground: hsl(120, 61%, 39%) jaśniejszy zielony 4b)
-      activeBackground: hsl(120, 61%, 44%)  najjaśniejszy zielony 4c)
-      background: hsl(348, 83%, 47%) czerwony 5a)
-      hoverBackbground: hsl(348, 83%, 52%) jaśniejszy czerwony 5b)
-      activeBackground: hsl(348, 83%, 57%) najjaśniejszy czerwony 5c)
-*/    
-
 const getInitialTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
 
