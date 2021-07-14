@@ -1,11 +1,11 @@
 export const theme = {
     primaryColor: {
-        standard: "teal",
+        standard: "hsl(180deg 100% 25%)",
         hover: "hsl(180, 100%, 30%)",
         active: "hsl(180, 100%, 35%)",
     },
-    secondaryColor: "white",
-    fillingColor: "#ddd",
+    secondaryColor: "hsl(0deg 0% 100%)",
+    fillingColor: "hsl(0deg 0% 87%)",
     buttonColors: {
         forestGreen: {
             standard: "hsl(120, 61%, 34%)",
