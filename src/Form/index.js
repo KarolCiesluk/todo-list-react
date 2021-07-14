@@ -11,9 +11,9 @@ const Form = ({ addNewTask }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const trimedTaskContent = newTaskContent.trim();
+        const trimmedTaskContent = newTaskContent.trim();
 
-        if (trimedTaskContent !== "") {
+        if (trimmedTaskContent !== "") {
             addNewTask(newTaskContent.trim());
             setNewTaskContent("");
         }
