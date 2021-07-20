@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { GlobalStyle } from './GlobaleStyle';
-import Tasks from './features/tasks/Tasks';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "styled-components";
 import { theme } from './theme';
@@ -43,7 +43,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Tasks />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
