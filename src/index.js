@@ -4,47 +4,18 @@ import { GlobalStyle } from './GlobaleStyle';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "styled-components";
+import { Provider } from "react-redux";
 import { theme } from './theme';
-import { configureStore } from "@reduxjs/toolkit";
-
-const initialState = { tasks: [], };
-
-const tasksReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "addTask":
-      return {
-        ...state,
-        tasks: [...state.tasks, action.payload],
-      };
-
-    default:
-      return state;
-  }
-};
-
-const addTask = content => ({
-  type: "addTask",
-  payload: content,
-});
-
-//selector
-const selectTasks = state => state.tasks;
-
-const store = configureStore({ reducer: tasksReducer });
-console.log(selectTasks(store.getState()));
-
-store.dispatch(addTask("zadanie 1"));
-console.log(selectTasks(store.getState()));
-
-store.dispatch(addTask("zadanie 2"));
-console.log(selectTasks(store.getState()));
+import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 
