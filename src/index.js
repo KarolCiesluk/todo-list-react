@@ -22,8 +22,22 @@ const tasksReducer = (state = initialState, action) => {
   }
 };
 
+const addTask = content => ({
+  type: "addTask",
+  payload: content,
+});
+
+//selector
+const selectTasks = state => state.tasks;
+
 const store = configureStore({ reducer: tasksReducer });
-console.log(store.getState());
+console.log(selectTasks(store.getState()));
+
+store.dispatch(addTask("zadanie 1"));
+console.log(selectTasks(store.getState()));
+
+store.dispatch(addTask("zadanie 2"));
+console.log(selectTasks(store.getState()));
 
 ReactDOM.render(
   <React.StrictMode>
