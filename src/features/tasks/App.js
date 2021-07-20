@@ -1,5 +1,5 @@
 import Form from "./Form";
-import Tasks from "./Tasks";
+import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
@@ -33,7 +33,7 @@ function App() {
         <Section
           title="Lista zadań"
           body={
-            <Tasks
+            <TaskList
               tasks={tasks}
               hideDone={hideDone}
               removeTask={removeTask}
