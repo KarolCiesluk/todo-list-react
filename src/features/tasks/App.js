@@ -1,11 +1,11 @@
-import Form from "./features/tasks/Form";
-import Tasks from "./features/tasks/Tasks";
-import Buttons from "./features/tasks/Buttons";
-import Section from "./common/Section";
-import Header from "./common/Header";
-import Container from "./common/Container";
+import Form from "./Form";
+import Tasks from "./Tasks";
+import Buttons from "./Buttons";
+import Section from "../../common/Section";
+import Header from "../../common/Header";
+import Container from "../../common/Container";
 import { useState } from "react";
-import { useTasks } from "./useTasks";
+import { useTasks } from "../../useTasks";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
