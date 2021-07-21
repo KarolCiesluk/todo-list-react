@@ -12,7 +12,7 @@ export const Item = styled.li`
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid ${({ theme }) => theme.fillingColor};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.fillingColor};
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -29,7 +29,7 @@ export const Content = styled.span`
 
 export const Button = styled.button`
     border: none;
-    color: ${({ theme }) => theme.secondaryColor};
+    color: ${({ theme }) => theme.colors.secondaryColor};
     width: 30px;
     height: 30px;
     padding: 0;
@@ -37,33 +37,33 @@ export const Button = styled.button`
 
     ${({ toggleDone }) => toggleDone && css`
         background: ${({ theme }) => {
-            return theme.buttonColors.forestGreen.standard;
+            return theme.colors.buttonColors.forestGreen.standard;
         }};
 
         &:hover {
             background: ${({ theme }) => {
-            return theme.buttonColors.forestGreen.hover;
+            return theme.colors.buttonColors.forestGreen.hover;
         }};
             cursor: pointer;
         }
 
         &:active {
             background: ${({ theme }) => {
-            return theme.buttonColors.forestGreen.active;
+            return theme.colors.buttonColors.forestGreen.active;
         }};
         }
     `}
 
     ${({ remove }) => remove && css`
-        background: ${({ theme }) => theme.buttonColors.crimson.standard};
+        background: ${({ theme }) => theme.colors.buttonColors.crimson.standard};
 
         &:hover {
-            background: ${({ theme }) => theme.buttonColors.crimson.hover};
+            background: ${({ theme }) => theme.colors.buttonColors.crimson.hover};
             cursor: pointer;
         }
 
         &:active {
-            background: ${({ theme }) => theme.buttonColors.crimson.active};
+            background: ${({ theme }) => theme.colors.buttonColors.crimson.active};
         }
     `}
 `;
