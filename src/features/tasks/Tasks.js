@@ -8,7 +8,6 @@ import { useTasks } from "../../useTasks";
 
 function Tasks() {
   const {
-    removeTask,
     setAllDone,
   } = useTasks();
 
@@ -23,9 +22,7 @@ function Tasks() {
       <Section
         title="Lista zadań"
         body={
-          <TaskList
-            removeTask={removeTask}
-          />
+          <TaskList />
         }
         extraHeaderContent={
           <Buttons
