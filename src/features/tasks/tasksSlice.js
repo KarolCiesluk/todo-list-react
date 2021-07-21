@@ -23,8 +23,8 @@ const tasksSlice = createSlice({
 
             tasks.splice(index, 1);
         },
-        setAllDone: state => {
-            for (const task of state.tasks) {
+        setAllDone: ({ tasks }) => {
+            for (const task of tasks) {
                 task.done = true;
             }
         },
