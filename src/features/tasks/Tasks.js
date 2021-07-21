@@ -9,9 +9,7 @@ import { useTasks } from "../../useTasks";
 function Tasks() {
   const {
     removeTask,
-    toggleTaskDone,
     setAllDone,
-    addNewTask
   } = useTasks();
 
   return (

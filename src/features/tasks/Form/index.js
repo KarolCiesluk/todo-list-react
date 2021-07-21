@@ -22,7 +22,7 @@ const Form = () => {
             content: trimmedNewTaskContent,
             done: false,
             id: nanoid(),
-        }))
+        }));
 
         setNewTaskContent("");
         inputRef.current.focus();
