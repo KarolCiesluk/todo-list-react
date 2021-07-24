@@ -1,7 +1,8 @@
+import { useSelector } from "react-redux";
 import { all, call, delay, put, takeEvery, takeLatest } from "redux-saga/effects";
 import { getExampleTasks } from "./getExampleTasks";
-import { fetchExampleTasks, setTasks, toggleTasksLoading } from "./tasksSlice";
-// import { useLocalStorage } from "./useLocalStorage";
+import { saveTasksInLocalStorage } from "./tasksLocalStorage";
+import { fetchExampleTasks, selectTasks, setTasks, toggleTasksLoading } from "./tasksSlice";
 
 function* fetchExampleTasksSuccess(exampleTasks) {
     yield all([
@@ -23,11 +24,13 @@ function* fetchExampleTasksHandler() {
     }
 };
 
-// function* saveTasksInLocalStorage() {
-//     yield call(useLocalStorage);
-// };
+const tasks = useSelector(selectTasks);
+
+function* saveTasksInLocalStorageHandler() {
+    yield call(saveTasksInLocalStorage, tasks);
+};
 
 export function* watchFetchExampleTasks() {
     yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
-    // yield takeEvery("*", saveTasksInLocalStorage);
+    yield takeEvery("*", saveTasksInLocalStorageHandler);
 };
