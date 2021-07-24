@@ -5,7 +5,6 @@ export const Button = styled.button`
     background: none;
     color: ${({ theme }) => theme.colors.primaryColor.standard};
     font-size: initial;
-    transition: color 0.3s;
 
     &:hover {
         color: ${({ theme }) => theme.colors.primaryColor.hover};
