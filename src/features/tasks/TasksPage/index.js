@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectAreTasksLoading } from "../tasksSlice";
 import { Button } from "./styled";
 
-function Tasks() {
+function TasksPage() {
 const dispatch = useDispatch();
 const areTasksLoading = useSelector(selectAreTasksLoading);
 
@@ -41,4 +41,4 @@ const areTasksLoading = useSelector(selectAreTasksLoading);
   );
 };
 
-export default Tasks;
+export default TasksPage;

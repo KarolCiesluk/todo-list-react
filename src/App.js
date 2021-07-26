@@ -1,7 +1,8 @@
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
+import TasksPage from "./features/tasks/TasksPage";
 
-import Tasks from "./features/tasks/TasksPage/Tasks";
+
 import { Navigation, NavigationButton } from "./styled";
 
 const App = () => (
@@ -19,7 +20,7 @@ const App = () => (
                 lalala
             </Route>
             <Route path="/zadania">
-                <Tasks />
+                <TasksPage />
             </Route>
             <Route path="/autor">
                 <AuthorPage />
