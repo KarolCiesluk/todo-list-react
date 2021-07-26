@@ -17,7 +17,7 @@ const TaskPage = () => {
                 title={task ? task.content : `Sorka, nie ma takiego zadania! 😛 `}
                 body={
                     task ?
-                        <><strong>Ukończone: </strong>{task.done ? "tak" : "nie"}</> :
+                        <><strong>Ukończone: </strong>{task.done ? "Tak" : "Nie"}</> :
                         ""
                 }
             />
