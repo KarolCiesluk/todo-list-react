@@ -25,7 +25,10 @@ const TaskList = () => {
           >
             {task.done ? "✓" : ""}
           </Button>
-          <Content done={task.done}>
+          <Content
+            path="/zadania/:id"
+            done={task.done}
+          >
             {task.content}
           </Content>
           <Button
