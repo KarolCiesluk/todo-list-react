@@ -33,7 +33,8 @@ function TasksPage() {
         body={
           <Input
             placeholder="Filtruj zadania"
-            search />
+            search
+          />
         }
       />
 
