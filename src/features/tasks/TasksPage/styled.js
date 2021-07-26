@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.button`
     border: none;
@@ -18,4 +18,13 @@ export const Button = styled.button`
     &:disabled {
         color: ${({ theme }) => theme.colors.fillingColor};
     }
+`;
+
+export const Input = styled.input`
+    padding: 10px;
+    border: 1px solid ${({ theme }) => theme.colors.fillingColor};
+
+    ${({search}) => search && css`
+        width: 100%;
+    `}
 `;

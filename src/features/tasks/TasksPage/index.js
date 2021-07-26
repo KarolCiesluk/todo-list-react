@@ -6,11 +6,11 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectAreTasksLoading } from "../tasksSlice";
-import { Button } from "./styled";
+import { Button, Input } from "./styled";
 
 function TasksPage() {
-const dispatch = useDispatch();
-const areTasksLoading = useSelector(selectAreTasksLoading);
+  const dispatch = useDispatch();
+  const areTasksLoading = useSelector(selectAreTasksLoading);
 
   return (
     <Container>
@@ -20,12 +20,19 @@ const areTasksLoading = useSelector(selectAreTasksLoading);
         body={<Form />}
         extraHeaderContent={
           <Button
-          onClick={() => dispatch(fetchExampleTasks())}
-          disabled={areTasksLoading}
+            onClick={() => dispatch(fetchExampleTasks())}
+            disabled={areTasksLoading}
           >
             {areTasksLoading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
           </Button>
         }
+      />
+
+      <Section
+        title="Wyszukiwarka"
+        body={<Input
+          placeholder="Filtruj zadania"
+          search />}
       />
 
       <Section

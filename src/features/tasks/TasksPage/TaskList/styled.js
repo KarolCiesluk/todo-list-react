@@ -39,11 +39,6 @@ export const StyledLink = styled(Link)`
     &:active {
         color: ${({theme}) => theme.colors.primaryColor.active};
     };
-
-    &:focus {
-        outline: none;
-        color: ${({theme}) => theme.colors.primaryColor.hover};
-    };
 `;
 
 export const Button = styled.button`
