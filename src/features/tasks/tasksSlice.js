@@ -62,4 +62,16 @@ export const selectAreTasksLoading = state => selectTasksState(state).areTasksLo
 export const getTaskById = (state, taskId) =>
     selectTasks(state).find(({ id }) => id === taskId);
 
+export const selectTasksByQuery = (state, query) => {
+    const tasks = selectTasks(state);
+
+    if (!query || query.trim() === "") {
+        return tasks;
+    } else {
+        return tasks.filter(({ content }) =>
+            content.toUpperCase().includes(query.trim().toUpperCase()));
+    }
+}
+
+
 export default tasksSlice.reducer;
