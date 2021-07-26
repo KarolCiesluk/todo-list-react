@@ -4,16 +4,16 @@ import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
 
 
-import { Navigation, NavigationButton } from "./styled";
+import { Navigation, StyledNavLink } from "./styled";
 
 const App = () => (
     <HashRouter>
         <Navigation>
             <li>
-                <NavigationButton to="/autor">O autorze</NavigationButton>
+                <StyledNavLink to="/autor">O autorze</StyledNavLink>
             </li>
             <li>
-                <NavigationButton to="/zadania">Zadania</NavigationButton>
+                <StyledNavLink to="/zadania">Zadania</StyledNavLink>
             </li>
         </Navigation>
         <Switch>
