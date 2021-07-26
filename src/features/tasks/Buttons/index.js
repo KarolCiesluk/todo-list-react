@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Button } from "../Button";
+import { Button } from "../styled";
 import {
   selectHideDone,
   selectIsEveryTaskDone,

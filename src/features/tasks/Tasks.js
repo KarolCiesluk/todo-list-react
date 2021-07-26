@@ -4,9 +4,9 @@ import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
-import { Button } from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectAreTasksLoading } from "./tasksSlice";
+import { Button } from "./styled";
 
 function Tasks() {
 const dispatch = useDispatch();
