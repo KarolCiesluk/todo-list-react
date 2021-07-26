@@ -11,8 +11,9 @@ const App = () => (
             <li><NavigationButton to="/zadania">Zadania</NavigationButton></li>
         </Navigation>
         <Switch>
-            <Route path="/autor"><AuthorPage /></Route>
+            <Route path="/zadania/45">lalala</Route>
             <Route path="/zadania"><Tasks /></Route>
+            <Route path="/autor"><AuthorPage /></Route>
         </Switch>
     </HashRouter>
 );
