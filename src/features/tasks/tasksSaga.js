@@ -16,6 +16,7 @@ function* fetchExampleTasksHandler() {
             put(toggleTasksLoading()),
             delay(2000),
         ]);
+        
         const exampleTasks = yield call(getExampleTasks);
         yield fetchExampleTasksSuccess(exampleTasks);
     } catch (error) {

@@ -24,6 +24,7 @@ const Buttons = () => {
           <Button onClick={() => dispatch(toggleHideDone())}>
             {hideDone ? "Pokaż" : "Ukryj"} ukończone
           </Button>
+          
           <Button
             onClick={() => dispatch(setAllDone())}
             doneAll

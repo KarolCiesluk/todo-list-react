@@ -31,6 +31,7 @@ const TaskList = () => {
           >
             {task.done ? "✓" : ""}
           </Button>
+
           <Content
 
             done={task.done}
@@ -39,6 +40,7 @@ const TaskList = () => {
               {task.content}
             </StyledLink>
           </Content>
+          
           <Button
             onClick={() => dispatch(removeTask(task.id))}
             remove

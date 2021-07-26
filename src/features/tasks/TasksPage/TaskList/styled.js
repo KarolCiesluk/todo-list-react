@@ -17,7 +17,7 @@ export const Item = styled.li`
 
     ${({ hidden }) => hidden && css`
         display: none;
-    `}
+    `};
 `;
 
 export const Content = styled.span`
@@ -25,7 +25,7 @@ export const Content = styled.span`
 
     ${({ done }) => done && css`
         text-decoration: line-through;
-    `}
+    `};
 `;
 
 export const StyledLink = styled(Link)`
@@ -59,14 +59,14 @@ export const Button = styled.button`
             return theme.colors.buttonColors.forestGreen.hover;
         }};
             cursor: pointer;
-        }
+        };
 
         &:active {
             background: ${({ theme }) => {
             return theme.colors.buttonColors.forestGreen.active;
         }};
-        }
-    `}
+        };
+    `};
 
     ${({ remove }) => remove && css`
         background: ${({ theme }) => theme.colors.buttonColors.crimson.standard};
@@ -74,10 +74,10 @@ export const Button = styled.button`
         &:hover {
             background: ${({ theme }) => theme.colors.buttonColors.crimson.hover};
             cursor: pointer;
-        }
+        };
 
         &:active {
             background: ${({ theme }) => theme.colors.buttonColors.crimson.active};
-        }
-    `}
+        };
+    `};
 `;

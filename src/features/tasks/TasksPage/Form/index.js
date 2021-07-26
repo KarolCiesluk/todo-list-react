@@ -38,6 +38,7 @@ const Form = () => {
                 placeholder="Co jest do zrobienia?"
                 autoFocus
             />
+            
             <Button>Dodaj zadanie</Button>
         </StyledForm>
     );

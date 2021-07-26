@@ -9,15 +9,15 @@ export const Button = styled.button`
     &:hover {
         color: ${({ theme }) => theme.colors.primaryColor.hover};
         cursor: pointer;
-    }
+    };
 
     &:active {
         color: ${({ theme }) => theme.colors.primaryColor.active};
-    }
+    };
 
     &:disabled {
         color: ${({ theme }) => theme.colors.fillingColor};
-    }
+    };
 `;
 
 export const Input = styled.input`
@@ -26,5 +26,5 @@ export const Input = styled.input`
 
     ${({search}) => search && css`
         width: 100%;
-    `}
+    `};
 `;
