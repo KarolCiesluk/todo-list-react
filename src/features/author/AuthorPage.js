@@ -7,10 +7,14 @@ import { aboutMe } from "./aboutMe";
 const AuthorPage = () => (
     <Container>
         <Header title="O autorze" />
-        
+
         <Section
             title="Karol Cieśluk"
-            body={<Bio>{aboutMe}</Bio>}
+            body={
+                <Bio>
+                    {aboutMe}
+                </Bio>
+            }
         />
     </Container>
 );
