@@ -16,7 +16,7 @@ export const Header = styled.header`
     @media (max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
         grid-template-columns: 1fr;
         grid-gap: 32px;
-    }
+    };
 `;
 
 export const Title = styled.h2`

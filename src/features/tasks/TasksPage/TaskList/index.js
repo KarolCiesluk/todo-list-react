@@ -51,6 +51,6 @@ const TaskList = () => {
       ))}
     </List>
   );
-}
+};
 
 export default TaskList;
