@@ -30,9 +30,11 @@ function TasksPage() {
 
       <Section
         title="Wyszukiwarka"
-        body={<Input
-          placeholder="Filtruj zadania"
-          search />}
+        body={
+          <Input
+            placeholder="Filtruj zadania"
+            search />
+        }
       />
 
       <Section
