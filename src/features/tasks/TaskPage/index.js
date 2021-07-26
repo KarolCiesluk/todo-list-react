@@ -1,6 +1,6 @@
 const TaskPage = () => (
     <Container>
-        <Header title="Lista zadań" />
+        <Header title="Szczegóły zadania" />
         <Section
             title="Dodaj nowe zadanie"
             body={}
