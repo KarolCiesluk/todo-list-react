@@ -6,7 +6,8 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchExampleTasks, selectAreTasksLoading } from "../tasksSlice";
-import { Button, Input } from "./styled";
+import { Button } from "./styled";
+import Search from "./Search";
 
 function TasksPage() {
   const dispatch = useDispatch();
@@ -31,10 +32,7 @@ function TasksPage() {
       <Section
         title="Wyszukiwarka"
         body={
-          <Input
-            placeholder="Filtruj zadania"
-            search
-          />
+          <Search />
         }
       />
 
