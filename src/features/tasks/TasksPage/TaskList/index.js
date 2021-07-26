@@ -26,7 +26,7 @@ const TaskList = () => {
             {task.done ? "✓" : ""}
           </Button>
           <Content
-            // path="/zadania/:id"
+            to={`/zadania/${task.id}`}
             done={task.done}
           >
             {task.content}
