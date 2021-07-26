@@ -5,7 +5,7 @@ import {
   toggleTaskDone,
   removeTask
 } from "../../tasksSlice";
-import { List, Item, Content, Button } from "./styled";
+import { List, Item, Content, Button, StyledLink } from "./styled";
 
 const TaskList = () => {
   const tasks = useSelector(selectTasks);
@@ -26,10 +26,12 @@ const TaskList = () => {
             {task.done ? "✓" : ""}
           </Button>
           <Content
-            to={`/zadania/${task.id}`}
+
             done={task.done}
           >
-            {task.content}
+            <StyledLink to={`/zadania/${task.id}`}>
+              {task.content}
+            </StyledLink>
           </Content>
           <Button
             onClick={() => dispatch(removeTask(task.id))}

@@ -20,12 +20,16 @@ export const Item = styled.li`
     `}
 `;
 
-export const Content = styled(Link)`
+export const Content = styled.span`
     word-break: break-word;
 
     ${({ done }) => done && css`
         text-decoration: line-through;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
 `;
 
 export const Button = styled.button`
