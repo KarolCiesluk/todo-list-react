@@ -1,5 +1,6 @@
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
+import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
 
 
@@ -17,7 +18,7 @@ const App = () => (
         </Navigation>
         <Switch>
             <Route path="/zadania/:id">
-                lalala
+                <TaskPage />
             </Route>
             <Route path="/zadania">
                 <TasksPage />
