@@ -1,11 +1,11 @@
 import Form from "./Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExampleTasks, selectAreTasksLoading } from "./tasksSlice";
+import { fetchExampleTasks, selectAreTasksLoading } from "../tasksSlice";
 import { Button } from "./styled";
 
 function Tasks() {

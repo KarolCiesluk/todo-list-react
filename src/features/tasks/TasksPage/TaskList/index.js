@@ -4,7 +4,7 @@ import {
   selectHideDone,
   toggleTaskDone,
   removeTask
-} from "../tasksSlice";
+} from "../../tasksSlice";
 import { List, Item, Content, Button } from "./styled";
 
 const TaskList = () => {
@@ -26,7 +26,7 @@ const TaskList = () => {
             {task.done ? "✓" : ""}
           </Button>
           <Content
-            path="/zadania/:id"
+            // path="/zadania/:id"
             done={task.done}
           >
             {task.content}

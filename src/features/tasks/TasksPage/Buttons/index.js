@@ -7,7 +7,7 @@ import {
   selectAreTasksEmpty,
   toggleHideDone,
   setAllDone,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 import { Wrapper } from "./styled";
 
 const Buttons = () => {
