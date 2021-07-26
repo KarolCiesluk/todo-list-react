@@ -10,7 +10,7 @@ export const Navigation = styled.ul`
     justify-content: center;
 `;
 
-export const NavigationButton = styled(NavLink)`
+export const StyledNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.colors.secondaryColor};
     margin: 20px;
     text-decoration: none;
