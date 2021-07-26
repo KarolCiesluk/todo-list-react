@@ -1,4 +1,4 @@
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
 
 import Tasks from "./features/tasks/TasksPage/Tasks";
@@ -14,6 +14,7 @@ const App = () => (
             <Route path="/zadania/:id">lalala</Route>
             <Route path="/zadania"><Tasks /></Route>
             <Route path="/autor"><AuthorPage /></Route>
+            <Route path="/"><Redirect to="/zadania" /></Route>
         </Switch>
     </HashRouter>
 );
