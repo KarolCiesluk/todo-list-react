@@ -27,3 +27,8 @@ export const Title = styled.h2`
 export const Body = styled.div`
     padding: 20px;
 `;
+
+export const Bio = styled.p`
+    line-height: 1.6;
+    margin: 0;
+`;
