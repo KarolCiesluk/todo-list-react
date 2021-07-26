@@ -1,5 +1,6 @@
 import { HashRouter, Route, Switch } from "react-router-dom";
-import Author from "./features/author";
+import AuthorPage from "./features/author/AuthorPage";
+
 import Tasks from "./features/tasks/Tasks";
 import { Navigation, NavigationButton } from "./styled";
 
@@ -10,7 +11,7 @@ const App = () => (
             <li><NavigationButton to="/zadania">Zadania</NavigationButton></li>
         </Navigation>
         <Switch>
-            <Route path="/autor"><Author /></Route>
+            <Route path="/autor"><AuthorPage /></Route>
             <Route path="/zadania"><Tasks /></Route>
         </Switch>
     </HashRouter>
