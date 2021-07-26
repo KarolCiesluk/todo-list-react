@@ -30,6 +30,20 @@ export const Content = styled.span`
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
+    color: ${({ theme }) => theme.colors.primaryColor.standard};
+
+    &:hover {
+        color: ${({theme}) => theme.colors.primaryColor.hover};
+    };
+
+    &:active {
+        color: ${({theme}) => theme.colors.primaryColor.active};
+    };
+
+    &:focus {
+        outline: none;
+        color: ${({theme}) => theme.colors.primaryColor.hover};
+    };
 `;
 
 export const Button = styled.button`
