@@ -13,11 +13,20 @@ To Do List is an app that helps with organizing tasks. You may list as many task
 The app was made during my participation in the YouCode frontend developer course.
 
 ## Technologies
-- HTML
-- Javascript
-- CSS
+- html
+- css
+- React JS
+- Flexbox
 - Grid
-- BEM
+- Immutability
+- Local Storage
+- Custom Hooks
+- Media Queries
+- Styled-Components
+- Redux
+- Redux Saga
+- React Router
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
