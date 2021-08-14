@@ -24,7 +24,11 @@ function TasksPage() {
             onClick={() => dispatch(fetchExampleTasks())}
             disabled={areTasksLoading}
           >
-            {areTasksLoading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+            {
+              areTasksLoading
+                ? "Ładowanie..."
+                : "Pobierz przykładowe zadania"
+            }
           </Button>
         }
       />
