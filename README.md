@@ -1,6 +1,6 @@
 # To Do List
 
-![ToDo List logo](public/readmeImage1.png)
+![ToDo List logo](./readmeImage1.png)
 
 ## Demo
 
