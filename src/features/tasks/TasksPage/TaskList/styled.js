@@ -17,7 +17,7 @@ export const Item = styled.li`
 
     ${({ hidden }) => hidden && css`
         display: none;
-    `};
+    `}
 `;
 
 export const Content = styled.span`
@@ -25,7 +25,7 @@ export const Content = styled.span`
 
     ${({ done }) => done && css`
         text-decoration: line-through;
-    `};
+    `}
 `;
 
 export const StyledLink = styled(Link)`
@@ -33,12 +33,12 @@ export const StyledLink = styled(Link)`
     color: ${({ theme }) => theme.colors.primaryColor.standard};
 
     &:hover {
-        color: ${({theme}) => theme.colors.primaryColor.hover};
-    };
+        color: ${({ theme }) => theme.colors.primaryColor.hover};
+    }
 
     &:active {
-        color: ${({theme}) => theme.colors.primaryColor.active};
-    };
+        color: ${({ theme }) => theme.colors.primaryColor.active};
+    }
 `;
 
 export const Button = styled.button`
@@ -50,22 +50,16 @@ export const Button = styled.button`
     transition: background 0.3s;
 
     ${({ toggleDone }) => toggleDone && css`
-        background: ${({ theme }) => {
-            return theme.colors.buttonColors.forestGreen.standard;
-        }};
+        background: ${({ theme }) => theme.colors.buttonColors.forestGreen.standard};
 
         &:hover {
-            background: ${({ theme }) => {
-            return theme.colors.buttonColors.forestGreen.hover;
-        }};
+            background: ${({ theme }) => theme.colors.buttonColors.forestGreen.hover};
             cursor: pointer;
-        };
+        }
 
         &:active {
-            background: ${({ theme }) => {
-            return theme.colors.buttonColors.forestGreen.active;
-        }};
-        };
+            background: ${({ theme }) => theme.colors.buttonColors.forestGreen.active};
+        }
     `};
 
     ${({ remove }) => remove && css`
@@ -74,10 +68,10 @@ export const Button = styled.button`
         &:hover {
             background: ${({ theme }) => theme.colors.buttonColors.crimson.hover};
             cursor: pointer;
-        };
+        }
 
         &:active {
             background: ${({ theme }) => theme.colors.buttonColors.crimson.active};
-        };
+        }
     `};
 `;

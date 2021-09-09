@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
 
     @media (max-width: ${({theme}) => theme.breakpoints.mobileMax}px) {
         grid-template-columns: 1fr;
-    };
+    }
 `;
 
 export const Button = styled.button`
@@ -21,14 +21,14 @@ export const Button = styled.button`
         transform: scale(1.1);
         background-color: ${({ theme }) => theme.colors.primaryColor.hover};
         cursor: pointer;
-    };
+    }
 
     &:focus {
         outline: none;
         background-color: ${({ theme }) => theme.colors.primaryColor.hover};
-    };
+    }
 
     &:active {
         background-color: ${({ theme }) => theme.colors.primaryColor.active};
-    };
+    }
 `;
