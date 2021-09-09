@@ -8,23 +8,30 @@ https://karolciesluk.github.io/todo-list-react/
 
 ## Description
 
-To Do List is an app that helps with organizing tasks. You may list as many tasks as you wish and tick boxes when they are done or remove them by clicking on the 🗑 button.
+To Do List is an app that helps with organizing tasks.
 
-The app was made during my participation in the YouCode frontend developer course.
+You may list as many tasks as you wish and tick boxes when they are done or remove them by clicking on the 🗑 button. 
+
+Additionally it's possible to filter existing tasks so that you only see the tasks that consist searched text.
+
+When you click on a task's text you will get to see its details.
+
+The app was written during my participation in the YouCode frontend developer course.
 
 ## Technologies
 - html
 - css
-- React JS
+- Javascript ES6+
 - Flexbox
 - Grid
-- Immutability
+- React
 - Local Storage
 - Custom Hooks
 - Media Queries
 - Styled-Components
+- Styled-Normalize
 - Redux
-- Redux Saga
+- Redux-Saga
 - React Router
 
 
