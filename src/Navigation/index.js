@@ -1,4 +1,4 @@
-import { toAuthor, toTasks } from "../routes";
+import { toAuthor, toTasks } from "../common/routes";
 import { NavigationWrapper, StyledNavLink } from "./styled";
 
 const Navigation = () => (
