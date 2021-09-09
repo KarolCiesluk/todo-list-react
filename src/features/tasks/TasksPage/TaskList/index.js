@@ -24,6 +24,7 @@ const TaskList = () => {
           key={task.id}
           hidden={task.done && hideDone}
         >
+
           <Button
             onClick={() => dispatch(toggleTaskDone(task.id))}
             toggleDone
@@ -32,7 +33,6 @@ const TaskList = () => {
           </Button>
 
           <Content
-
             done={task.done}
           >
             <StyledLink to={toTask({ id: task.id })}>
@@ -46,6 +46,7 @@ const TaskList = () => {
           >
             🗑️
           </Button>
+
         </Item>
       ))}
     </List>

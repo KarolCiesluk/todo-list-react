@@ -16,6 +16,7 @@ function TasksPage() {
   return (
     <Container>
       <Header title="Lista zadań" />
+
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
@@ -49,6 +50,7 @@ function TasksPage() {
           <Buttons />
         }
       />
+
     </Container>
   );
 };

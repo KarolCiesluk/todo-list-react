@@ -6,10 +6,10 @@ import { rootSaga } from "./rootSaga";
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-    reducer: {
-        tasks: tasksReducer,
-    },
-    middleware: [sagaMiddleware],
+  reducer: {
+    tasks: tasksReducer,
+  },
+  middleware: [sagaMiddleware],
 });
 
 sagaMiddleware.run(rootSaga);

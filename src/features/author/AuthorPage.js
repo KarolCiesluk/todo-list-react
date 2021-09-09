@@ -5,18 +5,17 @@ import { Bio } from "../../common/Section/styled";
 import { aboutMe } from "./aboutMe";
 
 const AuthorPage = () => (
-    <Container>
-        <Header title="O autorze" />
-
-        <Section
-            title="Karol Cieśluk"
-            body={
-                <Bio>
-                    {aboutMe}
-                </Bio>
-            }
-        />
-    </Container>
+  <Container>
+    <Header title="O autorze" />
+    <Section
+      title="Karol Cieśluk"
+      body={
+        <Bio>
+          {aboutMe}
+        </Bio>
+      }
+    />
+  </Container>
 );
 
 export default AuthorPage;
