@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "styled-components";
+import { Normalize } from 'styled-normalize';
 import { Provider } from "react-redux";
 import { theme } from "./core/theme";
 import { GlobalStyle } from "./core/GlobaleStyle";
@@ -12,6 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <Normalize />
         <GlobalStyle />
         <App />
       </ThemeProvider>
