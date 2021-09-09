@@ -13,7 +13,7 @@ You may list as many tasks as you wish and tick boxes when they are done or remo
 Additionally it's possible to filter existing tasks so that you only see the tasks that consist searched text.
 When you click on a task's text you will get to see its details.
 
-The app was written during my participation in the YouCode frontend developer course.
+The app was written during [YouCode](https://youcode.pl/frontend-developer/) front-end developer course.
 
 ## Technologies
 - html
